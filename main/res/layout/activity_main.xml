@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleMain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Record"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="8dp"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/yellow"
+        android:textAlignment="center"
+
+        />
+
+    <TextView
+        android:id="@+id/glucoseRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/glucoseRes"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        />
+
+
+    <EditText
+        android:id="@+id/readingid"
+        android:layout_width="125dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/glucoseRes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:hint="5.5"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:textStyle="bold"
+
+        />
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateBtn"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/addBtnTxt"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"/>
+
+    <Button
+        android:id="@+id/dateBtn"
+        style="?android:spinnerStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/readingid"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/white"
+        android:gravity="left"
+        android:onClick="openDatePicker"
+        android:text="JAN/11/2022: "
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:id="@+id/fl_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_nav"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/nav_menu"
+        />
+
+
+
+
+
+
+</RelativeLayout>
